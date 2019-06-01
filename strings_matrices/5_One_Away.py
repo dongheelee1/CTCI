@@ -24,6 +24,7 @@ def one_away(A, B):
                     else: 
                         j += 1 #just move pointer for B 
                 else: 
+                    #if chars match, move both pointers
                     i += 1 
                     j += 1
                 
