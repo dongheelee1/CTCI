@@ -15,7 +15,7 @@ def one_away(A, B):
         #string lengths differ, check if there is an insertion/delete
         if lengths_differ_by_one: 
             while i < len(A) and j < len(B): 
-                if A[i] != B[i]: 
+                if A[i] != B[j]: 
                     edits += 1
                     if edits > 1: 
                         return False
