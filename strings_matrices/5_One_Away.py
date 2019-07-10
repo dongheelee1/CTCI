@@ -2,18 +2,18 @@
 #A and B are strings
 #return True if A and B are one or zero edits away (there can be insert a char, remove a char, or replace a char)
 def one_away(A, B): 
-        lengths_differ = False 
+        lengths_differ_by_one = False 
         edits = 0  
         
         if abs(len(B) - len(A)) > 1: 
             return False 
         elif abs(len(B) - len(A)) == 1: 
-            lengths_differ = True
+            lengths_differ_by_one = True
         elif abs(len(B) - len(A)) == 0: 
-            lengths_differ = False
+            lengths_differ_by_one = False
         
         #string lengths differ, check if there is an insertion/delete
-        if lengths_differ: 
+        if lengths_differ_by_one: 
             while i < len(A) and j < len(B): 
                 if A[i] != B[i]: 
                     edits += 1
