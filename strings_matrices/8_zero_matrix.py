@@ -52,21 +52,21 @@ class Solution(object):
         """
         rows = len(matrix)
         cols = len(matrix[0])
-        col_zero = False 
-        row_zero = False 
+        cols_zero = False 
+        rows_zero = False 
         
         #check to see if there is 0 exists in the 0th row
         #if it does, make note and break
         for i in range(cols): 
             if matrix[0][i] == 0: 
-                col_zero = True 
+                cols_zero = True 
                 break 
         
         #check to see if there is 0 exists in the 0th col
         #if it does, make note and break
         for i in range(rows): 
             if matrix[i][0] == 0: 
-                row_zero = True 
+                rows_zero = True 
                 break 
         
         #start at the 1st col and 1st row, and iterate
@@ -85,11 +85,11 @@ class Solution(object):
                     matrix[row][col] = 0 
         
         # See if the 0th column and 0th row needs to be set to zero as well             
-        if col_zero: 
+        if cols_zero: 
             for i in range(cols): 
                 matrix[0][i] = 0
                 
-        if row_zero: 
+        if rows_zero: 
             for j in range(rows):
                 matrix[j][0] = 0 
             
